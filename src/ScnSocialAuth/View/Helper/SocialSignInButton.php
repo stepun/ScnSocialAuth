@@ -31,8 +31,8 @@ class SocialSignInButton extends AbstractHelper
                 break;
         }
         echo
-            '<button data-toggle="tooltip" data-placement="bottom" title="' . ucfirst($provider) . '" class="btn btn-' . $class . '" onclick="document.location.href='
+            '<button data-toggle="tooltip" data-placement="bottom" title="' . ucfirst($provider) . '" class="btn btn-' . $class . '" onclick="document.location.href=\''
             . $this->view->url('scn-social-auth-user/login/provider', array('provider' => $provider))
-            . $redirectArg . '">' . $link . '</button>';
+            . $redirectArg . '\'">' . $link . '</button>';
     }
 }
