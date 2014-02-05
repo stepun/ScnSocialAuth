@@ -2,10 +2,14 @@
 $socialSignIn = true;
 foreach ($this->options->getEnabledProviders() as $provider) {
     if ($socialSignIn) {
-        echo '<h1>Social Sign In</h1>';
+        echo '<h1>' . $this->translate('Social Sign In') . '</h1>';
         $socialSignIn = false;
+        echo '<div class="btn-group">';
     }
-    echo '<dd>' . $this->socialSignInButton($provider, $this->redirect) . '</dd>';
+    echo $this->socialSignInButton($provider, $this->redirect);
+}
+if (!$socialSignIn) {
+    echo '</div>';
 }
 if ($this->options->getSocialLoginOnly() == false) {
     echo $this->zfcUserLogin;
