@@ -13,6 +13,10 @@ class SocialSignInButton extends AbstractHelper
                 $link = '<i class="fa fa-twitter"></i>';
                 $class = "twitter";
                 break;
+            case 'linkedIn':
+                $link = '<i class="fa fa-linkedin"></i>';
+                $class = "linkedin";
+                break;
             case 'facebook':
                 $link = '<i class="fa fa-facebook"></i>';
                 $class = "facebook";
